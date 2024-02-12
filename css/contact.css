@@ -79,10 +79,8 @@
 
 .form__months {
     margin-bottom: 16px;
-}
-
-.form__time {
-
+    display: flex;
+    gap: 16px;
 }
 
 .form__subtitle {
@@ -100,6 +98,7 @@
 
 .form__btn-mounth_active {
     color: #d10014;
+    transform: scale(1.15);
 }
 
 .form__input-wrapper {
@@ -110,15 +109,23 @@
 }
 
 .form__input {
-    background: #f0f4f4;
-    border-radius: 8px;
     padding: 12px 20px;
-    width: 526px;
-    height: 46px;
+    border-radius: 8px;
+    background-color: #f0f4f4;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     color: #222;
+    border: 1px solid transparent;
+}
+
+.form__input:hover {
+    background-color: #f0f4f4;
+
+}
+
+.form__input:focus-visible {
+    border-color: #d0d0d0;
 }
 
 .form__info {
@@ -136,7 +143,7 @@
 .form__btn-wrapper {
     margin-top: 20px;
     display: flex;
-    gap: 6px;
+    gap: 8px;
 }
 
 .form__btn {
@@ -157,8 +164,66 @@
     color: #fff;
 }
 
+.form__btn_submit {
+    display: none;
+    background-color: #d10014;
+    color: #fff;
+}
+
 .form__btn:disabled {
     color: #222;
     background-color: #f0f4f4;
     opacity: 0.4;
+    pointer-events: none;
+}
+
+@media (max-width: 1080px) {
+    .contact {
+        padding-top: 60px;
+    }
+
+    .contact__title {
+        font-size: 60px;
+    }
+
+    .form {
+        padding: 40px;
+    }
+
+    .form__title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact {
+        padding: 50px 0 100px;
+    }
+
+    .contact__title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 660px) {
+    .contact {
+        padding: 50px 0 80px;
+    }
+
+    .contact__title {
+        font-size: 32px;
+    }
+
+    .form {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+
+    .form__input-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 460px) {
+    
 }
